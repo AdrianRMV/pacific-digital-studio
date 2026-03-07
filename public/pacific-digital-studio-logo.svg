@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 200">
+  <style>
+    .title {
+      font-family: "Playfair Display", "Times New Roman", serif;
+      font-size: 110px;
+      fill: white;
+      letter-spacing: 6px;
+    }
+    .subtitle {
+      font-family: "Montserrat", Arial, sans-serif;
+      font-size: 28px;
+      fill: white;
+      letter-spacing: 8px;
+    }
+    .line {
+      stroke: white;
+      stroke-width: 2;
+    }
+  </style>
+
+  <text x="50%" y="100" text-anchor="middle" class="title">
+    PACIFIC
+  </text>
+
+  <line x1="240" y1="140" x2="360" y2="140" class="line"/>
+  <text x="50%" y="150" text-anchor="middle" class="subtitle">
+    DIGITAL STUDIO
+  </text>
+  <line x1="540" y1="140" x2="660" y2="140" class="line"/>
+</svg>

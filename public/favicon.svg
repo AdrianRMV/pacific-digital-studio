@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <style>
+    .letter {
+      font-family: "Playfair Display", serif;
+      font-size: 80px;
+      fill: white;
+    }
+  </style>
+
+  <text x="50%" y="75" text-anchor="middle" class="letter">P</text>
+</svg>
