@@ -24,7 +24,9 @@ Pacific-Digital/
 │   │   ├── Services.tsx    # Service cards
 │   │   ├── WhyChooseUs.tsx # Benefits list
 │   │   ├── Process.tsx     # 4-step process
-│   │   ├── Portfolio.tsx    # Featured work (accepts optional projects prop)
+│   │   ├── Portfolio.tsx    # Selected work (cards with preview, tech, links)
+│   ├── data/
+│   │   └── projects.ts     # Portfolio project entries (preview, liveUrl, tech)
 │   │   ├── About.tsx       # About section
 │   │   ├── CTA.tsx         # “Let’s build…” call to action
 │   │   ├── Contact.tsx     # Lead capture form
@@ -35,36 +37,23 @@ Pacific-Digital/
 │   ├── globals.css         # Tailwind + base styles
 │   ├── layout.tsx          # Root layout, fonts, metadata
 │   └── page.tsx            # Home page (assembles all sections)
-├── public/                 # Static assets (add logo, favicon, etc.)
+├── public/                 # Static assets
+│   └── projects/           # Project preview images/GIFs for portfolio
 ├── tailwind.config.ts      # Theme (colors, fonts)
 ├── next.config.js          # Next config (e.g. images.remotePatterns)
 └── package.json
 ```
 
-## Replacing placeholder portfolio items
+## Portfolio (Selected Work)
 
-1. **Data**  
-   Edit the `PLACEHOLDER_PROJECTS` array in **`app/components/Portfolio.tsx`**, or pass a `projects` prop from the page.
+1. **Project data**  
+   Edit **`app/data/projects.ts`**. Each project has: `id`, `title`, `description`, `tech[]`, `preview` (path to image/GIF), `liveUrl`, and optional `githubUrl`.
 
-2. **Add real projects**  
-   Each item follows the `PortfolioItem` type:
+2. **Preview assets**  
+   Put screenshots or GIFs in **`public/projects/`** and reference them as `/projects/filename.jpg` or `/projects/filename.gif` in `projects.ts`. Use **16:9** aspect ratio; **1200px wide or more** recommended for sharp display.
 
-   ```ts
-   {
-     id: string;           // slug, e.g. "acme-roofing"
-     title: string;        // e.g. "Acme Roofing"
-     category: string;     // e.g. "Contractor"
-     description: string;  // Short blurb
-     imageUrl?: string;    // Optional; when set, card shows image
-     imageAlt?: string;    // Optional alt text
-   }
-   ```
-
-3. **Images**  
-   Set `imageUrl` (and optionally `imageAlt`) on each project. External URLs are allowed via `next.config.js` `images.remotePatterns`. For local images, put files in `public/` and use paths like `/portfolio/acme.jpg`.
-
-4. **Project pages**  
-   Replace **`app/portfolio/[id]/page.tsx`** with real case-study content (copy, images, layout). Use `params.id` to load the right project (e.g. from a CMS or a local data file).
+3. **Adding more projects**  
+   Append a new object to the `projects` array in `app/data/projects.ts` with the same shape. The grid is responsive (3 → 2 → 1 columns).
 
 ## Copy to customize first
 
@@ -92,5 +81,3 @@ npm start
 ```
 
 Deploy to Vercel, Netlify, or any Node host that supports Next.js.
-# pacific-digital-studio
-# pacific-digital-studio2
