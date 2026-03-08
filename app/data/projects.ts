@@ -29,13 +29,13 @@ export const projects: Project[] = [
         // githubUrl: 'https://github.com',
     },
     {
-        id: 'cleaning-services',
-        title: 'North Shore Cleaning',
+        id: 'landscaping-services',
+        title: 'Green Land Solutions',
         description:
-            'Clean, professional site for a residential and commercial cleaning service with easy booking.',
+            'Clean, professional site for a residential and commercial landscaping service with easy booking.',
         tech: ['Next.js', 'Tailwind CSS'],
-        preview: '/projects/cleaning-preview.jpg',
-        liveUrl: 'https://example.com',
+        preview: '/projects/green-land.gif',
+        liveUrl: 'https://green-land-self.vercel.app/',
     },
     {
         id: 'wellness-clinic',
