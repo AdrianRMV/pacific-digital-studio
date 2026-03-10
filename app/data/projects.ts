@@ -37,13 +37,13 @@ export const projects: Project[] = [
         preview: '/projects/green-land.gif',
         liveUrl: 'https://green-land-self.vercel.app/',
     },
-    {
-        id: 'wellness-clinic',
-        title: 'Pacific Wellness Clinic',
-        description:
-            'Calm, credible website for a Vancouver wellness clinic—team, services, and patient contact.',
-        tech: ['React', 'Tailwind CSS'],
-        preview: '/projects/wellness-preview.jpg',
-        liveUrl: 'https://example.com',
-    },
+    // {
+    //     id: 'wellness-clinic',
+    //     title: 'Pacific Wellness Clinic',
+    //     description:
+    //         'Calm, credible website for a Vancouver wellness clinic—team, services, and patient contact.',
+    //     tech: ['React', 'Tailwind CSS'],
+    //     preview: '/projects/wellness-preview.jpg',
+    //     liveUrl: 'https://example.com',
+    // },
 ];
